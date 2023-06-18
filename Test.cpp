@@ -6,8 +6,6 @@ using namespace std;
 
 TEST_SUITE("MagicalContainer") {
 
-    
-    
     TEST_CASE("Check Size function"){
         MagicalContainer container;
         CHECK(container.size() == 0);
@@ -23,8 +21,6 @@ TEST_SUITE("MagicalContainer") {
         CHECK(container.size() == 0);
     }
 
-
-
     TEST_CASE("Default constructor") {
         MagicalContainer container;
         CHECK(container.size() == 0);
@@ -35,7 +31,6 @@ TEST_SUITE("MagicalContainer") {
         container.addElement(5);
         container.addElement(3);
         container.addElement(8);
-
         CHECK(container.size() == 3);
         container.addElement(5);
         container.addElement(3);
@@ -56,8 +51,6 @@ TEST_SUITE("MagicalContainer") {
 
         container.removeElement(6);
         CHECK(container.size() == 0);
-
-
     }
 
     TEST_CASE("Remove non-existent element")
@@ -69,8 +62,6 @@ TEST_SUITE("MagicalContainer") {
 
         CHECK_THROWS(container.removeElement(4));
     }
-    
-
 }
 
 TEST_CASE("init Iterators"){  
@@ -107,7 +98,6 @@ TEST_CASE("AscendingIterator"){
     CHECK_THROWS(++it);
 
 }
-
 
 TEST_CASE("SideCrossIterator"){
     MagicalContainer container;
